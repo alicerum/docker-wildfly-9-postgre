@@ -1,0 +1,14 @@
+socio-hr:
+    image: wyvie/wildfly-postgre
+    ports:
+        - "8080:8080"
+        - "9990:9990"
+    volumes:
+        - ~/webapp:/opt/jboss/wildfly/deployments
+    links:
+        - postgres:postgres
+postgres:
+    image: postgres
+    environment:
+        POSTGRES_USER: 'sociohr'
+        POSTGRES_PASSWORD: 'sociohr'
