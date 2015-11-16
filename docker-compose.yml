@@ -1,5 +1,5 @@
 wildfly:
-    image: wyvie/wildfly-postgre
+    image: wyvie/wildfly-9-postgre
     ports:
         - "8080:8080"
         - "9990:9990"
